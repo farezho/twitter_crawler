@@ -1,0 +1,47 @@
+========================================== INTRO ==================================================================
+Author: Farezho, please Give a Star on my github repository link https://github.com/farezho/twitter_crawler xoxo
+Silahkan gunakan aplikasi ini sebaik mungkin dan jangan lupa mencantumkan credits nya yaa ^^ 
+
+Aplikasi ini menggunakan API Twitter dan juga package https://github.com/thujohn/twitter
+Aplikasi ini membutuhkan versi PHP >= 5.4.0
+Menggunakan Laravel 5.5 dan silahkan install composer terlebih dahulu untuk mengupdate depedensi yang dibutuhkan
+===================================================================================================================
+
+
+========================================== PENTING ================================================================
+Sebelumnya teman-teman harus mendaftar pada link https://developer.twitter.com/en/apps terlebih dahulu untuk mendapatkan access token
+===================================================================================================================
+
+
+[INSTALASI]
+Jika sudah, maka teman-teman akan mendapatkan 4 token yang akan dibutuhkan untuk menggunakan aplikasi ini
+1. Pada direktori, terdapat file .env.example, copy isi yang ada pada file tersebut, lalu save dengan nama ".env" (tanpa "")
+
+2. Buat database terlebih dahulu, lalu pada file .env di bagian pengaturan database (DB_DATABASE, DB_USERNAME, DB_PASSWORD, dll), isi sesuaikan dengan database teman-teman
+
+3. Jalankan perintah composer update pada command prompt atau git bash untuk mendapatkan depedensi-depedensi pada aplikasi ini
+
+4. Jalankan perintah php artisan vendor:publish --provider="Thujohn\Twitter\TwitterServiceProvider"
+
+5. Masih pada file .env, tambahkan 4 baris dibawah beserta token sesuai dengan yang teman-teman dapatkan sebelumnya
+TWITTER_CONSUMER_KEY=
+TWITTER_CONSUMER_SECRET=
+TWITTER_ACCESS_TOKEN=
+TWITTER_ACCESS_TOKEN_SECRET=
+
+6. Jalankan perintah php artisan migrate untuk membuat tabel-tabel yang akan digunakan sebagai penyimpanan data hasil crawling
+
+Note: yang perlu diperhatikan ketika menggunakan framework Laravel adalah, teman-teman hanya masuk ke database (MySQL dll) hanya pada saat membuat database nya saja. Untuk membuat/memodifikasi tabel beserta kolomnya, menggunakan perintah php artisan. Info selengkapnya silahkan baca di https://laravel.com/docs/5.5/migrations
+
+
+[PEMAKAIAN APLIKASI]
+1. Pada CMD atau Git bash, masuk ke direktori aplikasi ini, lalu ketikkan perintah php artisan serve . Setelah itu akan muncul url untuk aplikasi ini. Silahkan ketikkan pada web browser yang teman-teman gunakan
+
+2. APLIKASI SUDAH BISA DIGUNAKAAN HORE
+
+
+
+Kalau teman-teman tertarik ingin belajar Laravel lebih dalam, silahkan baca Laravel dokumentasi di https://laravel.com/docs
+
+Terima kasih sudah menggunakan aplikasi ini :D
+Kita kolaborasi yuk untuk mengembangkan aplikasi ini lagi!! :D
